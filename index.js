@@ -125,7 +125,7 @@ function receiveDice(slag) {
       showButton(købKnap)
       showButton(skipKnap)
       hideButton(slåKnap)
-      beskedTekst = `${player.name}, du landede på. ${board[player.position].name}`
+      beskedTekst = `${player.name}, slå en ${slag} og landede på ${board[player.position].name}`
     }
   } else {
     // du skal leje
