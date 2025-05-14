@@ -223,8 +223,10 @@ function createUIButtons() {
   slåKnap.position((width - slåKnap.width)/2, (height - slåKnap.height)/2)
   slåKnap.mousePressed(function() {
     beskedTekst = "Venter på terning..."
+    client.publish("Matador", "start")
+    slåKnap.hide()
     //skal sende besked til mqtt server så jeg kan modtage et tal
-    state = "waitingForDice"
+    setTimeout(() => state = "waitingForDice", 1000)
   });
 
   // her laver jeg knappen til at købe feltet
